@@ -1,0 +1,192 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.sir {
+    font-size: larger;
+}
+
+#face {
+    box-shadow: 1px 2px 2px 2px rgb(93, 93, 93);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pop1 {
+    display: none;
+}
+
+.dark-mode {
+    --bg-color: #2a2929;
+    --text-color: #f0f1f1;
+    --btn-color: #f0f1f1;
+    --btn-text-color: #3d3e3e;
+    --role-color: rgb(255, 150, 120);
+    --slider-bg: #888;
+    --slider-button-bg: #4CAF50;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.corner-btn {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: transparent;
+    color: rgb(47, 45, 45);
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.corner-btn .btn-name {
+    position: relative;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+}
+
+.corner-btn .btn-name1 { transform: rotate(320deg); margin-left: 40px; margin-top: 40px; }
+.corner-btn .btn-name2 { transform: rotate(50deg); margin-left: 40px; margin-bottom: 40px; }
+.corner-btn .btn-name3 { transform: rotate(40deg); margin-right: 40px; margin-top: 50px; }
+.corner-btn .btn-name4 { transform: rotate(-40deg); margin-right: 40px; margin-bottom: 43px; }
+
+.corner-btn:hover {
+    background-color: #3d3e3e;
+    color: #f0f1f1;
+}
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+
+.corner-btn .btn-name:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.top-left { top: 0; left: 0; transform: translate(-40%, -40%); }
+.top-right { top: 0; right: 0; transform: translate(32%, -45%); }
+.bottom-left { bottom: 0; left: 0; transform: translate(-40%, 40%); }
+.bottom-right { bottom: 0; right: 0; transform: translate(30%, 40%); }
+
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-image img {
+    margin-top: 30px;
+    width: 375px;
+    height: 400px;
+    mix-blend-mode: color-burn;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 25px;
+    margin-top: 70px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: rgb(246, 245, 245);
+    transition: .4s;
+}
+
+input:checked + .slider { background-color: #505050; }
+input:focus + .slider { box-shadow: 0 0 1px #ffffff; }
+input:checked + .slider:before { transform: translateX(26px); }
+
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+#name {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#role {
+    color: rgb(145, 145, 145);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
